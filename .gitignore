@@ -1,0 +1,7 @@
+
+# pythonics
+venv/
+.ipynb_checkpoints/
+
+# secrets
+.env
