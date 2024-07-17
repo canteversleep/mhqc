@@ -1,9 +1,15 @@
+from typing import Dict, List, Any
+import os
+import gzip
+import pickle
+import csv
 import requests
 import json
-import os
 import ijson
-from typing import Dict, List, Any
+import copy
 
+
+### Networking things
 
 def stream_spans(endpoint, traceid):
     """
@@ -34,7 +40,95 @@ def stream_spans(endpoint, traceid):
         # Handle any exceptions that occur during the request
         return {"error": str(e)}
 
+
+## Procesing traces
+
+def stream_traces(f, out, compression=True, debug=False):
+    """
+    Stream traces from Jaeger API and write to CSV file. If debug is true, also return 
+    list of traces. It implements a caching mechanism. For a given directory, it keeps
+    track of which traceIDs have already been collected from previous services and
+    skips them.
+    """
+    def openf(f, compression):
+        if compression:
+            return gzip.open(f, 'wt', compresslevel=9, newline='')
+        return open(f, 'w', newline='')
+    # read pickle file with existing trace IDs
+    traceIDs = set()
+    try:
+        with open(os.path.dirname(out) + '/.traceIDs.pickle', 'rb') as cache:
+            traceIDs = pickle.load(cache)
+            print('Using cached traces')
+    except:
+        print('No existing trace IDs found in cache')
+        pass
+    row = {}
+    row["traceID"] = None #["traceID", "duration-ms", "startTime", "endTime", "rpcErrors", "operation"]
+    row["duration-ms"] = None
+    row["startTime"] = None
+    row["endTime"] = None
+    row["rpcErrors"] = None
+    row["operation"] = None
+    row["processes"] = None
+    with openf(out, compression) as o:
+        w = csv.writer(o)
+        #w.writerow(row.keys())
+        traces = ijson.items(f, 'data.item')
+        i = 0
+        tot = 0
+        ret = []
+        for t in traces:
+            tot += 1
+            if t['traceID'] not in traceIDs:
+                traceIDs.add(t['traceID'])
+                i += 1
+                if i%100==0:
+                    # update progress bar
+                    print(f'\r==> {i} written traces to {out}', end='', flush=True)
+                spans = t['spans']
+                endTrace = max([s['startTime'] + s['duration'] for s in spans])
+                startTrace = min([s['startTime'] for s in spans])
+                traceDuration = endTrace -startTrace
+                hasErrors = False
+                for si in range(len(spans)):
+                    if si == 0:
+                        operationName = spans[si]['operationName']
+                    for tag in spans[si]['tags']:
+                        if tag['key'] == 'error':
+                            hasErrors = tag['value']
+                            break
+                processes = []
+                for p in t['processes']:
+                    processes.append(t['processes'][p]['serviceName'])
+                row["traceID"] = t["traceID"]
+                row["duration-ms"] = traceDuration/1000 
+                row["startTime"] = startTrace
+                row["endTime"] = endTrace
+                row["rpcErrors"] = hasErrors
+                row["operation"] = operationName
+                row['processes'] = ';'.join(set(processes)) # processes involved in this trace
+                w.writerow(row.values())
+                if debug:
+                    ret.append(copy.copy(row))
+    print(f'\r==> {i}/{tot} written traces to {out}', end='', flush=True)
+    with open(os.path.dirname(out) + '/.traceIDs.pickle', 'wb') as cache:
+        print(f'\nRewriting cache of size {len(traceIDs)} to {os.path.dirname(out) + "/.traceIDs.pickle"}')
+        pickle.dump(traceIDs, cache)
+    with open(os.path.dirname(out) + '/header.csv', 'w') as ff:
+        w = csv.writer(ff)
+        w.writerow(row.keys())
+    if debug:
+       return ret
+
+
 def generate_trace_json(trace: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Generate a JSON representation of a single trace.
+    
+    :param trace: A dictionary containing trace data
+    :return: A dictionary representing the trace in the desired JSON format
+    """
     def create_span_dict(span: Dict[str, Any]) -> Dict[str, Any]:
         return {
             "spanID": span["spanID"],

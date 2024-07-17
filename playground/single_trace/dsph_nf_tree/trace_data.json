@@ -1,0 +1,131 @@
+{
+  "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+  "rootSpan": {
+    "spanID": "1a722d7278baa053",
+    "operation": "SearchHandler start",
+    "service": "unknown_service:wlgen_proc",
+    "startTime": 1720953256991598,
+    "endTime": 1720953257011317,
+    "duration": 19719,
+    "error": false,
+    "children": [
+      {
+        "spanID": "43f968fd5735c742",
+        "operation": "SearchHandler start",
+        "service": "unknown_service:frontend_service_process",
+        "startTime": 1720953256993244,
+        "endTime": 1720953257010078,
+        "duration": 16834,
+        "error": false,
+        "children": [
+          {
+            "spanID": "e80924daae497f65",
+            "operation": "Nearby start",
+            "service": "unknown_service:frontend_service_process",
+            "startTime": 1720953256993260,
+            "endTime": 1720953257002350,
+            "duration": 9090,
+            "error": false,
+            "children": [
+              {
+                "spanID": "ab2ce641ef5678e3",
+                "operation": "Nearby start",
+                "service": "unknown_service:search_service_process",
+                "startTime": 1720953256994549,
+                "endTime": 1720953257001661,
+                "duration": 7112,
+                "error": false,
+                "children": [
+                  {
+                    "spanID": "1bba50f600b7cc3f",
+                    "operation": "Nearby start",
+                    "service": "unknown_service:search_service_process",
+                    "startTime": 1720953256994588,
+                    "endTime": 1720953256996810,
+                    "duration": 2222,
+                    "error": false,
+                    "children": [
+                      {
+                        "spanID": "551101ffeebe4120",
+                        "operation": "Nearby start",
+                        "service": "unknown_service:geo_service_process",
+                        "startTime": 1720953256995789,
+                        "endTime": 1720953256995867,
+                        "duration": 78,
+                        "error": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "spanID": "9c9959424051562f",
+                    "operation": "GetRates start",
+                    "service": "unknown_service:search_service_process",
+                    "startTime": 1720953256996838,
+                    "endTime": 1720953257001645,
+                    "duration": 4807,
+                    "error": false,
+                    "children": [
+                      {
+                        "spanID": "02db9805175490e9",
+                        "operation": "GetRates start",
+                        "service": "unknown_service:rate_service_process",
+                        "startTime": 1720953256998024,
+                        "endTime": 1720953257000796,
+                        "duration": 2772,
+                        "error": false,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "spanID": "c190bc830cf70b53",
+            "operation": "CheckAvailability start",
+            "service": "unknown_service:frontend_service_process",
+            "startTime": 1720953257002379,
+            "endTime": 1720953257006434,
+            "duration": 4055,
+            "error": false,
+            "children": [
+              {
+                "spanID": "00fd6c775887fa58",
+                "operation": "CheckAvailability start",
+                "service": "unknown_service:reserv_service_process",
+                "startTime": 1720953257003508,
+                "endTime": 1720953257005883,
+                "duration": 2375,
+                "error": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "spanID": "62881199157a1a95",
+            "operation": "GetProfiles start",
+            "service": "unknown_service:frontend_service_process",
+            "startTime": 1720953257006476,
+            "endTime": 1720953257010064,
+            "duration": 3588,
+            "error": false,
+            "children": [
+              {
+                "spanID": "db6760c02d714fb3",
+                "operation": "GetProfiles start",
+                "service": "unknown_service:profile_service_process",
+                "startTime": 1720953257007554,
+                "endTime": 1720953257009407,
+                "duration": 1853,
+                "error": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

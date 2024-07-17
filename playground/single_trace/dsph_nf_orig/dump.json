@@ -1,0 +1,610 @@
+{
+    "data": [
+        {
+            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+            "spans": [
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "02db9805175490e9",
+                    "flags": 1,
+                    "operationName": "GetRates start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "9c9959424051562f"
+                        }
+                    ],
+                    "startTime": 1720953256998024,
+                    "duration": 2772,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "db6760c02d714fb3",
+                    "flags": 1,
+                    "operationName": "GetProfiles start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "62881199157a1a95"
+                        }
+                    ],
+                    "startTime": 1720953257007554,
+                    "duration": 1853,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "1bba50f600b7cc3f",
+                    "flags": 1,
+                    "operationName": "Nearby start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "ab2ce641ef5678e3"
+                        }
+                    ],
+                    "startTime": 1720953256994588,
+                    "duration": 2222,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "ab2ce641ef5678e3",
+                    "flags": 1,
+                    "operationName": "Nearby start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "e80924daae497f65"
+                        }
+                    ],
+                    "startTime": 1720953256994549,
+                    "duration": 7112,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p4",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "9c9959424051562f",
+                    "flags": 1,
+                    "operationName": "GetRates start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "ab2ce641ef5678e3"
+                        }
+                    ],
+                    "startTime": 1720953256996838,
+                    "duration": 4807,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p5",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "00fd6c775887fa58",
+                    "flags": 1,
+                    "operationName": "CheckAvailability start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "c190bc830cf70b53"
+                        }
+                    ],
+                    "startTime": 1720953257003508,
+                    "duration": 2375,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p6",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "1a722d7278baa053",
+                    "flags": 1,
+                    "operationName": "SearchHandler start",
+                    "references": [],
+                    "startTime": 1720953256991598,
+                    "duration": 19719,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p7",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "551101ffeebe4120",
+                    "flags": 1,
+                    "operationName": "Nearby start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "1bba50f600b7cc3f"
+                        }
+                    ],
+                    "startTime": 1720953256995789,
+                    "duration": 78,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p8",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "43f968fd5735c742",
+                    "flags": 1,
+                    "operationName": "SearchHandler start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "1a722d7278baa053"
+                        }
+                    ],
+                    "startTime": 1720953256993244,
+                    "duration": 16834,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p9",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "62881199157a1a95",
+                    "flags": 1,
+                    "operationName": "GetProfiles start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "43f968fd5735c742"
+                        }
+                    ],
+                    "startTime": 1720953257006476,
+                    "duration": 3588,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p10",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "c190bc830cf70b53",
+                    "flags": 1,
+                    "operationName": "CheckAvailability start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "43f968fd5735c742"
+                        }
+                    ],
+                    "startTime": 1720953257002379,
+                    "duration": 4055,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p11",
+                    "warnings": null
+                },
+                {
+                    "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                    "spanID": "e80924daae497f65",
+                    "flags": 1,
+                    "operationName": "Nearby start",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "cc1d6566e5f051a4c11eca0a221fc80f",
+                            "spanID": "43f968fd5735c742"
+                        }
+                    ],
+                    "startTime": 1720953256993260,
+                    "duration": 9090,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "jaeger"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p12",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "unknown_service:rate_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "RateService"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p10": {
+                    "serviceName": "unknown_service:frontend_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "ProfileService_OTServerWrapperInterface"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p11": {
+                    "serviceName": "unknown_service:frontend_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "ReservationService_OTServerWrapperInterface"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p12": {
+                    "serviceName": "unknown_service:frontend_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "SearchService_OTServerWrapperInterface"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "unknown_service:profile_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "ProfileService"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "unknown_service:search_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "GeoService_OTServerWrapperInterface"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p4": {
+                    "serviceName": "unknown_service:search_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "SearchService"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p5": {
+                    "serviceName": "unknown_service:search_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "RateService_OTServerWrapperInterface"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p6": {
+                    "serviceName": "unknown_service:reserv_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "ReservationService"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p7": {
+                    "serviceName": "unknown_service:wlgen_proc",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "FrontEndService_OTServerWrapperInterface"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p8": {
+                    "serviceName": "unknown_service:geo_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "GeoService"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                },
+                "p9": {
+                    "serviceName": "unknown_service:frontend_service_process",
+                    "tags": [
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "FrontEndService"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "go"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.26.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}
