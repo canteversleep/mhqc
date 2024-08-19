@@ -7,6 +7,9 @@ import requests
 import json
 import ijson
 import copy
+from dotenv import load_dotenv
+from pathlib import Path
+
 
 
 ### Networking things
@@ -191,3 +194,13 @@ def process_all_traces(input_file: str, output_dir: str):
     print(f"\nCompleted processing all traces. Output files are in {output_dir}")
 
 
+def load_parent_env():
+    # Start from the current working directory
+    current_dir = Path.cwd()
+
+    # Traverse up the directory structure
+    for parent in current_dir.parents:
+        env_path = parent / '.env'
+        if env_path.exists():
+            load_dotenv(env_path)
+            break
